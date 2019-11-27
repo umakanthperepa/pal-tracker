@@ -41,10 +41,10 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry delete(long timeEntryId) {
+    public void delete(long timeEntryId) {
         if (timeEntryMap.containsKey(timeEntryId)){
             timeEntryMap.remove(timeEntryId);
         }
-        return null;
+        //return find(timeEntryId);
     }
 }
